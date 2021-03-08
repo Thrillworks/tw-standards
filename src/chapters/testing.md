@@ -2,6 +2,7 @@
 title: 'Testing'
 dateUpdated: '27-02-2021'
 summary: 'About designing, writing and using tests'
+tags: ['testing', 'tdd', 'dependencies', 'unit testing', 'coverage', 'mocks', 'storybook']
 chapter: '10'
 ---
 # 10. Testing

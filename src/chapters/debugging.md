@@ -2,6 +2,7 @@
 title: 'Debugging'
 dateUpdated: '27-02-2021'
 summary: 'About debugging, debugging tools and memory usage'
+tags: ['debugging', 'debugger', 'memory', 'memwatch', 'heapdump']
 chapter: '12'
 ---
 # 12. Debugging

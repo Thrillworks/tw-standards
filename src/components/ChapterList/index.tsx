@@ -23,7 +23,7 @@ const ChapterList: React.FC<ChapterListProps> = ({ chapters }) => (
   <StyledList>
     {chapters.map((node, i) => (
       <li key={node.id}>
-        <Link to={`/chapter${node.fields?.slug}`}>
+        <Link to={node.fields?.slug}>
           <h3>{node.frontmatter?.title}</h3>
         </Link>
       </li>

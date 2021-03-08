@@ -2,6 +2,7 @@
 title: 'Teamwork'
 dateUpdated: '27-02-2021'
 summary: 'About using git, continuous integration, and how we work together'
+tags: ['git', 'jira', 'commit', 'stage', 'commit messages']
 chapter: '2'
 ---
 # 2. Teamwork

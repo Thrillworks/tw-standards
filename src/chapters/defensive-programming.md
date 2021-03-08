@@ -2,6 +2,7 @@
 title: 'Defensive Programming'
 dateUpdated: '27-02-2021'
 summary: 'About defensive programming and general best programming practices'
+tags: ['defensive', 'global', 'destructuring', 'assertions', 'errors', 'linting']
 chapter: '3'
 ---
 # 3. Defensive Programming

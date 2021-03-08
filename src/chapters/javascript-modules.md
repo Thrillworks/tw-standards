@@ -2,6 +2,7 @@
 title: 'JavaScript Modules'
 dateUpdated: '27-02-2021'
 summary: 'About using and selecting JavaScript modules'
+tags: ['modules', 'es6', 'npm', 'imports', 'packages']
 chapter: '7'
 ---
 # 7. JavaScript Modules

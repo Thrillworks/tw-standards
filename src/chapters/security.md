@@ -2,6 +2,7 @@
 title: 'Security'
 dateUpdated: '27-02-2021'
 summary: 'About security principles'
+tags: ['security', 'authentication', 'authorization', 'data', 'passwords', 'tokens']
 chapter: '14'
 ---
 # 14. Security

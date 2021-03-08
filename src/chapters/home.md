@@ -2,6 +2,7 @@
 title: 'Welcome'
 dateUpdated: '27-02-2021'
 summary: 'The Thrillworks Development Standards guide home page'
+tags: ['welcome', 'introduction']
 chapter: '0'
 ---
 ## Welcome

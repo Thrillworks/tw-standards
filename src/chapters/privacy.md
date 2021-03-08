@@ -2,6 +2,7 @@
 title: 'Privacy'
 dateUpdated: '27-02-2021'
 summary: 'About the use and collection of user data, and protecting privacy'
+tags: ['privacy', 'user data', 'data collection', 'anonymizing']
 chapter: '15'
 ---
 # 15. Privacy

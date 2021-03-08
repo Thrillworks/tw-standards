@@ -2,6 +2,7 @@
 title: 'Integration Testing'
 dateUpdated: '27-02-2021'
 summary: 'About testing'
+tags: ['testing', 'integration', 'mocks']
 chapter: '13'
 ---
 # 13. Integration Testing
