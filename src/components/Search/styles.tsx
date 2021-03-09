@@ -67,7 +67,11 @@ const Popover = css`
   background: ${({ theme }) => theme.background};
 `;
 
-export const StyledSearchResult = styled(SearchResult)`
+interface StyledSearchResultProps {
+  show: boolean;
+}
+
+export const StyledSearchResult = styled(SearchResult)<StyledSearchResultProps>`
   display: ${(props) => (props.show ? `block` : `none`)};
   ${Popover}
   .HitCount {
