@@ -23,7 +23,10 @@ export const createPages: GatsbyNode['createPages'] = async ({
   actions,
 }) => {
   const { createPage } = actions;
-  const result = await graphql<GatsbyTypes.allChaptersQuery>(`
+  // TODO: Revert to GatsbyTypes.allChaptersQuery once the plugin supports gatsby-node
+  const result = await graphql<{
+    allMarkdownRemark: { nodes: { fields: { slug: string } }[] };
+  }>(`
     query allChapters {
       allMarkdownRemark {
         nodes {
@@ -35,7 +38,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
     }
   `);
 
-  result.data?.allMarkdownRemark.nodes.forEach(node => {
+  result.data?.allMarkdownRemark.nodes.forEach((node) => {
     createPage({
       path: `/chapter${node.fields?.slug}`,
       component: path.resolve(`./src/templates/chapter/index.tsx`),
