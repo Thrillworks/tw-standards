@@ -9,14 +9,17 @@ import {
   Snippet,
   PoweredBy,
 } from 'react-instantsearch-dom';
+import styled from 'styled-components';
+
+import { HitCountContainer, SearchResultContainer } from './styles';
 
 const HitCount = connectStateResults(({ searchResults }) => {
   const hitCount = searchResults && searchResults.nbHits;
 
   return hitCount > 0 ? (
-    <div className="HitCount">
+    <HitCountContainer>
       {hitCount} result{hitCount !== 1 ? `s` : ``}
-    </div>
+    </HitCountContainer>
   ) : null;
 });
 
@@ -31,20 +34,50 @@ const PageHit = ({ hit }) => (
   </div>
 );
 
+const StyledHits = styled(Hits)`
+  ul {
+    list-style: none;
+    margin-left: 0;
+  }
+  li.ais-Hits-item {
+    margin-bottom: 1em;
+    a {
+      color: ${({ theme }) => theme.foreground};
+      h4 {
+        margin-bottom: 0.2em;
+      }
+    }
+    span {
+      ${({ theme }) => theme.paragraph2}
+    }
+  }
+`;
+
+const Credit = styled(PoweredBy)`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 70%;
+  svg {
+    width: 50px;
+    margin-left: 5px;
+  }
+`;
+
 const HitsInIndex = ({ index }) => (
   <Index indexName={index.name}>
     <HitCount />
-    <Hits className="Hits" hitComponent={PageHit} />
+    <StyledHits hitComponent={PageHit} />
   </Index>
 );
 
-const SearchResult = ({ indices, className }) => (
-  <div className={className}>
+const SearchResult = ({ indices, show }) => (
+  <SearchResultContainer show={show}>
     {indices.map((index) => (
       <HitsInIndex index={index} key={index.name} />
     ))}
-    <PoweredBy />
-  </div>
+    <Credit />
+  </SearchResultContainer>
 );
 
 export default SearchResult;

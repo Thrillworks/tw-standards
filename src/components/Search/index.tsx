@@ -1,17 +1,20 @@
-import React, { createRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch } from 'react-instantsearch-dom';
+import styled from 'styled-components';
 
-import {
-  StyledSearchBox,
-  StyledSearchResult,
-  StyledSearchRoot,
-} from './styles';
+import SearchBox from './SearchBox';
+import SearchResult from './SearchResult';
 import useClickOutside from './useClickOutside';
 
+const SearchContainer = styled.div`
+  position: relative;
+  margin: 0.6em 0;
+`;
+
 const Search = ({ indices }) => {
-  const rootRef = createRef();
+  const rootRef = useRef(null);
   const [query, setQuery] = useState();
   const [hasFocus, setFocus] = useState(false);
   const searchClient = algoliasearch(
@@ -22,19 +25,19 @@ const Search = ({ indices }) => {
   useClickOutside(rootRef, () => setFocus(false));
 
   return (
-    <StyledSearchRoot ref={rootRef}>
+    <SearchContainer ref={rootRef}>
       <InstantSearch
         searchClient={searchClient}
         indexName={indices[0].name}
         onSearchStateChange={({ query }) => setQuery(query)}
       >
-        <StyledSearchBox onFocus={() => setFocus(true)} hasFocus={hasFocus} />
-        <StyledSearchResult
+        <SearchBox onFocus={() => setFocus(true)} hasFocus={hasFocus} />
+        <SearchResult
           show={query && query.length > 0 && hasFocus}
           indices={indices}
         />
       </InstantSearch>
-    </StyledSearchRoot>
+    </SearchContainer>
   );
 };
 
