@@ -2,6 +2,7 @@
 title: 'Securing Node Backends'
 dateUpdated: '27-02-2021'
 summary: 'About security on the server side'
+tags: ['security', 'vulnerabilities', 'errors']
 chapter: '17'
 ---
 # 17. Securing Node Backends

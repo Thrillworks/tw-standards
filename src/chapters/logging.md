@@ -2,6 +2,7 @@
 title: 'Logging'
 dateUpdated: '27-02-2021'
 summary: 'About writing and using log messages'
+tags: ['logs', 'console', 'trace', 'error', 'debugging']
 chapter: '11'
 ---
 # 11. Logging

@@ -2,6 +2,7 @@
 title: 'TypeScript'
 dateUpdated: '27-02-2021'
 summary: 'About using TypeScript'
+tags: ['typescript', 'linting', 'types']
 chapter: '9'
 ---
 # 9. TypeScript

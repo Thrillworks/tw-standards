@@ -2,6 +2,7 @@
 title: 'Readable Code'
 dateUpdated: '27-02-2021'
 summary: 'About formatting, code readability, naming conventions, and documentation'
+tags: ['code smells', 'clever code', 'style', 'convention', 'naming']
 chapter: '4'
 ---
 # 4. Readable Code

@@ -2,6 +2,7 @@
 title: 'Asynchronicity'
 dateUpdated: '27-02-2021'
 summary: 'About async and await, callbacks and the event loop'
+tags: ['event loop', 'async', 'await', 'promises', 'callbacks']
 chapter: '6'
 ---
 # 6. Asynchronicity

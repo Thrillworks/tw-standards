@@ -55,5 +55,8 @@ declare module 'styled-components' {
     breakpointLgInt: number;
     breakpointXlInt: number;
     maxWidthContainer: number;
+    foreground: string;
+    background: string;
+    faded: string;
   }
 }

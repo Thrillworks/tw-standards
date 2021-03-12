@@ -44,6 +44,9 @@ const standardsTheme = {
   breakpointLgInt: 992,
   breakpointXlInt: 1200,
   maxWidthContainer: 1200,
+  foreground: '#050505',
+  background: 'white',
+  faded: '#888',
 };
 
 export default standardsTheme;

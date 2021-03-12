@@ -2,6 +2,7 @@
 title: 'Cross Site Scripting (XSS)'
 dateUpdated: '27-02-2021'
 summary: 'About cross-site scripting and security'
+tags: ['XSS', 'security']
 chapter: '16'
 ---
 # 16. Cross Site Scripting (XSS)

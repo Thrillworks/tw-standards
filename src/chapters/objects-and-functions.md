@@ -2,6 +2,7 @@
 title: 'Objects and Functions'
 dateUpdated: '27-02-2021'
 summary: 'About the design and use of objects and functions'
+tags: ['oop', 'functional programming', 'inheritance', 'prototyping', 'composition', 'closures']
 chapter: '5'
 ---
 # 5. Objects And Functions

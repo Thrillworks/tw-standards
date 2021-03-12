@@ -2,6 +2,7 @@
 title: 'General Rules'
 dateUpdated: '27-02-2021'
 summary: 'Introduction and general notes'
+tags: ['standards', 'guidelines', 'introduction']
 chapter: '1'
 ---
 # 1. General Rules

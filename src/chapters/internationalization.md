@@ -2,6 +2,7 @@
 title: 'Internationalization'
 dateUpdated: '27-02-2021'
 summary: 'About i18n'
+tags: ['internationalization', 'i18n']
 chapter: '8'
 ---
 # 8. Internationalization

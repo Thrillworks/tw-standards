@@ -1,5 +1,6 @@
 import type { GatsbyConfig } from 'gatsby';
 import * as path from 'path';
+import { algoliaQueries } from '../utils/algoliaQueries';
 
 const stylePlugins: GatsbyConfig['plugins'] = [
   {
@@ -13,6 +14,17 @@ const stylePlugins: GatsbyConfig['plugins'] = [
     options: {
       fonts: [`roboto:400,700`, `roboto condensed:700`, `jetbrains mono:300`],
       display: 'swap',
+    },
+  },
+];
+
+const searchPlugins: GatsbyConfig['plugins'] = [
+  {
+    resolve: `gatsby-plugin-algolia`,
+    options: {
+      appId: process.env.GATSBY_ALGOLIA_APP_ID,
+      apiKey: process.env.ALGOLIA_ADMIN_KEY,
+      queries: algoliaQueries,
     },
   },
 ];
@@ -127,6 +139,7 @@ const config: GatsbyConfig = {
     },
     ...metaPlugins,
     ...stylePlugins,
+    ...searchPlugins,
     ...typescriptPlugins,
     ...markdownPlugins,
     // this (optional) plugin enables Progressive Web App + Offline functionality

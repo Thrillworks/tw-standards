@@ -9,7 +9,6 @@ export const StyledList = styled.ol`
   list-style: none;
 
   li {
-    padding: ${themeGet('elementPadding')} 0;
     margin: 0;
     transition: all 0.3s ease-in-out;
 
@@ -17,7 +16,8 @@ export const StyledList = styled.ol`
       color: inherit;
       text-decoration: none;
       transition: all 0.3s ease-in-out;
-      display: flex;
+      display: inline-block;
+      padding: 14px 0;
       justify-content: space-between;
       align-items: baseline;
 

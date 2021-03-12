@@ -37,6 +37,15 @@ Your new project should now be set up. Depending on the pre-installed pacakges t
 - https://www.npmjs.com/package/eslint
 - https://www.npmjs.com/package/@thrillworksinc/eslint-config-thrillworks
 
+
+**Search**
+
+Search is powered by Algolia; the search index is created when you run `gatsby build`. API keys should be stored in an .env file; ask a project dev or look in the Thrillworks LastPass for that info. In the interests of getting up and running quickly, the front-end components are currently provided by React InstantSearch, a library provided by Algolia with ready-made React components; we could replace these with our own UI in the future.
+
+- https://www.gatsbyjs.com/plugins/gatsby-plugin-algolia/
+- https://www.gatsbyjs.com/docs/adding-search-with-algolia
+- https://www.algolia.com/doc/guides/building-search-ui/getting-started/react/
+
 ---
 
 ### PROJECT BEST PRACTICES
