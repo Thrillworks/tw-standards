@@ -17,9 +17,9 @@ The guide itself is a Gatsby site built from a collection of Markdown documents.
 Go ahead and try:
 
 ```bash
-$ git clone https://bitbucket.org/thrillworksinc/tw-standards-v2.git
+$ git clone https://github.com/Thrillworks/tw-standards.git
 or
-$ git clone git@bitbucket.org:thrillworksinc/tw-standards-v2.git
+$ git clone git@github.com:Thrillworks/tw-standards.git
 ```
 
 Each chapter of the guide is a Markdown file, with the .md extension. They are all located in src/chapters. You can edit them locally, as well as creating new ones.
