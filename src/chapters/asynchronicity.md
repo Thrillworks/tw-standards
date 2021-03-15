@@ -8,7 +8,7 @@ chapter: '6'
 # 6. Asynchronicity
 1. ## The Basics
 	1. ### Understand the Event Loop. 
-		Understand that JavaScript does not use preemptive multitasking like C or Java. It relies on cooperative multitasking using the event loop. When you have control, it’s yours until you relinquish it. After that, the next item in the queue is executed.  See the Concurrency model and Event Loop on MDN for more information.
+		Understand that JavaScript does not use preemptive multitasking like C or Java. It relies on cooperative multitasking using the event loop. When you have control, it’s yours until you relinquish it. After that, the next item in the queue is executed.  See the [Concurrency model and Event Loop on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop) for more information.
 	2. ### Avoid Optimistic Code. 
 		Avoid code that assumes that the results of an earlier request will be available at a specific time, e.g. after some fixed delay.
 	3. ### When in Doubt, Use an  Asynchronous Interface. 
@@ -16,7 +16,7 @@ chapter: '6'
 	4. ### An Asynchronous Interface Should Always Act Acsynchronously. 
 		If your function returns a promise from any code path, it should return a promise from every code path.
 	5. ### Test in Slow Motion. 
-		Artificial delays (e.g. in server response) can help reveal async problems.Such delays can be easily simulated either on the server side or on the client. For a client-side solution, wrap your HTTP calls in a function that inserts a delay either before or after the call, like so:
+		Artificial delays (e.g. in server response) can help reveal async problems. Such delays can be easily simulated either on the server side or on the client. For a client-side solution, wrap your HTTP calls in a function that inserts a delay either before or after the call, like so:
 		
 		```js
 		return $timeout(
