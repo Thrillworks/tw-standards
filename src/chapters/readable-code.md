@@ -12,20 +12,20 @@ chapter: '4'
 	2. ### Follow Project Conventions. 
 		When inheriting a code base, consider the conventions already established in it. In many cases, the codebase as a whole would be easier to understand if you stick with those conventions rather than using ones we might consider better. This applies especially to symbol names and formatting rules.
 	3. ### Avoid “Code Smells”. 
-		Code smells are superficial things that tip you off to the fact that something else might be wrong in the code. If your code has such a “smell”, see if this is a symptom of a deeper problem. If so, fix the underlying problem. If the issue is just superficial, then clean it up nonetheless, so that the next person does not have to spend time investigating it. Common types of “code smells” include duplicated code, long functions, too many arguments to a function, very large objects, objects that everyone has access to, etc. The [Code Smell] article in Wikipedia provides more examples.
+		Code smells are superficial things that tip you off to the fact that something else might be wrong in the code. If your code has such a “smell”, see if this is a symptom of a deeper problem. If so, fix the underlying problem. If the issue is just superficial, then clean it up nonetheless, so that the next person does not have to spend time investigating it. Common types of “code smells” include duplicated code, long functions, too many arguments to a function, very large objects, objects that everyone has access to, etc. The [Code Smell][https://en.wikipedia.org/wiki/Code_smell] article in Wikipedia provides more examples.
 	4. ### Avoid “Clever” Code. 
 		A conventional solution that is easy to understand is usually preferred to a clever solution that saves a few lines of code but would puzzle people who will work on this code later. If you do decide to be clever, make sure to provide documentation.
 2. ## Formatting
 	1. ### Mind the Style. 
 		Having consistent style makes it easier for different developers to collaborate.
 	2. ### Indent With 2 Spaces. 
-		Never use tabs. Tabs vs. spaces is a holy war. It’s not worth rehashing each side’s arguments here. What’s important is that a mixture of tabs and spaces is intolerable, so a convention is needed. Ours is to use 2 spaces. **So say we all**.
+		Never use tabs. Tabs vs. spaces is a holy war. It’s not worth rehashing each side’s arguments here. What’s important is that a mixture of tabs and spaces is intolerable, so a convention is needed. Our convention is to use 2 spaces. Again, consistency is important.
 	3. ### Cut Your Lines. 
-		Keep all lines under 80 characters long. You may be working on a large screen. Others may be working on smaller ones - or in two columns. Or they want to use a part of their screen for other editor panels. And someone else is trying to read your code on a phone. The oldtimers might call us lax here and insist that the proper length limit is 78. But it’s 2020, so we move with the times.
-	4. ### VSCode
-		IDEs come and go, Right now we all use VSCode, if you want to use VI, VIM etc, go for it, but we will hold you to the standards for linting and IDE configuration that are standard and easy in the editor everyone else uses.
+		Keep all lines under 80 characters long. You may be working on a large screen. Others may be working on smaller screens - or in two columns. Or they want to use a part of their screen for other editor panels. And someone else is trying to read your code on a phone. The oldtimers might call us lax here and insist that the proper length limit is 78. But it’s 2020, so we move with the times.
+	4. ### VSCode.
+		IDEs come and go; right now we all use VSCode. If you want to use VI, VIM etc, go for it, but we will hold you to the standards for linting and IDE configuration that are standard and easy in the editor everyone else uses.
 	5. ### Use Tools. 
-		Use Prettify with our standard settings for all other white space questions. Put them in your `.prettifyrc`. Do not fight Prettify. Let it do your thinking for you. Additionally, place an `.editorconfig` file in your repo to make it easier for other developers to comply with the same standards.::Sample configuration files are available in our private “dev” repository, under dotfiles. :: When using `.editorconfig`, make sure that it does not contradict settings in `.prettifyrc`. To make Sublime Text work with `.editorconfig`, install “EditorConfig” plugin using Package Control in VSCode.
+		Use Prettify with our standard settings for all other white space questions. Put them in your `.prettifyrc`. Do not fight Prettify. Let it do your thinking for you. Additionally, place an `.editorconfig` file in your repo to make it easier for other developers to comply with the same standards. Sample configuration files are available in our private “dev” repository, under dotfiles. When using `.editorconfig`, make sure that it does not contradict settings in `.prettifyrc`. To make Sublime Text work with `.editorconfig`, install “EditorConfig” plugin using Package Control: go to Preferences > Package Control > Install Package.
 	6. ### Use Consistent Quotes. 
 		Use single quotes `'` to delimit string constants in JavaScript. Use double quotes `"` in JSX and HTML. Both choices are a matter of convention. What’s important is consistency.
 	7. ### Avoid Unnecessary Parentheses. 
@@ -57,14 +57,14 @@ chapter: '4'
 	3. ### Explain the Purpose. 
 		Use comments to document the purpose of each module, service, constant, function. In most cases a one-sentence summary goes a long way.
 	4. ### Document All Functions. 
-		Use JSDoc-style comments to document all functions. VSCode and other IDEs will display this information in tooltips, make your documentation portable!
+		Use [JSDoc-style][https://en.wikipedia.org/wiki/JSDoc] comments to document all functions. VSCode and other IDEs will display this information in tooltips - make your documentation portable!
 	5. ### Explain Tricky Bits. 
 		Provide comments for tricky code. This should in particular include any code that deviates from what one might expect as the “normal” solution. Think about a new developer, what was tricky to you on your first day on the job?
 	6. ### Do Not Explain the Obvious. 
-		Do not write comments that explain things that are obvious to everyone. Everyone here has a minimum skillset, if you find yourself typing exactly what a function name is it’s probably not required.
+		Do not write comments that explain things that are obvious to everyone. Everyone here has a minimum skillset: if you find yourself typing exactly what a function name is, it’s probably not required.
 5. ## File Organization
 	1. ### Use Standard Structure.
-		 Consistent file organization makes it easier for another developer to navigate your code. This is often more important than using the “best” structure.
+		Consistent file organization makes it easier for another developer to navigate your code. This is often more important than using the “best” structure.
 	2. ### Use a `src` Folder. 
 		All application specific code lives in a “src” folder, with the exception of the “main” or “index” file.
 	3. ### Use Scalable Structure. 
@@ -92,8 +92,20 @@ chapter: '4'
 	6. ### Use Our Standard Full-Stack Organization. 
 		As a general rule, put all client code under “client” and all server code “server” ::Please Contribute::
 	7. ### Isolate Third-Party and Generated Code. 
-		Never mix your own code with third-party code. Do not mix generated code with code written by hand. It should be easy to see which code was written as a part of the project, which code was brought from somewhere else, and which was generated.
+		Never mix your own code with third-party code. Do not mix generated code with code written by hand. It should be easy to see which code was written as a part of the project, which code was brought from somewhere else, and which was generated. (As an example, the type definitions file for this repo is output to a folder separate from the other code, which is named `generated`.)
 	8. ### Organize Code by Functionality.
-		::Please Contribute:: 
+		As projects become larger, organization becomes key. Keep modules of similar function or realm together in clearly-organized folders within the `src` folder. The particular organization will vary with the needs of each project, but one possible example could be:
+
+		```
+		src
+		  > components
+			> hooks
+			> pages
+			> services
+			  > auth
+			> theme
+			> utils
+		```
+
 	9. ### Give Each Component Its Own Directory. 
 		Component code acts like a small application with an index file and logically separated supporting files.
