@@ -12,7 +12,7 @@ chapter: '4'
 	2. ### Follow Project Conventions. 
 		When inheriting a code base, consider the conventions already established in it. In many cases, the codebase as a whole would be easier to understand if you stick with those conventions rather than using ones we might consider better. This applies especially to symbol names and formatting rules.
 	3. ### Avoid “Code Smells”. 
-		Code smells are superficial things that tip you off to the fact that something else might be wrong in the code. If your code has such a “smell”, see if this is a symptom of a deeper problem. If so, fix the underlying problem. If the issue is just superficial, then clean it up nonetheless, so that the next person does not have to spend time investigating it. Common types of “code smells” include duplicated code, long functions, too many arguments to a function, very large objects, objects that everyone has access to, etc. The [Code Smell][https://en.wikipedia.org/wiki/Code_smell] article in Wikipedia provides more examples.
+		Code smells are superficial things that tip you off to the fact that something else might be wrong in the code. If your code has such a “smell”, see if this is a symptom of a deeper problem. If so, fix the underlying problem. If the issue is just superficial, then clean it up nonetheless, so that the next person does not have to spend time investigating it. Common types of “code smells” include duplicated code, long functions, too many arguments to a function, very large objects, objects that everyone has access to, etc. The [Code Smell](https://en.wikipedia.org/wiki/Code_smell) article in Wikipedia provides more examples.
 	4. ### Avoid “Clever” Code. 
 		A conventional solution that is easy to understand is usually preferred to a clever solution that saves a few lines of code but would puzzle people who will work on this code later. If you do decide to be clever, make sure to provide documentation.
 2. ## Formatting
@@ -57,7 +57,7 @@ chapter: '4'
 	3. ### Explain the Purpose. 
 		Use comments to document the purpose of each module, service, constant, function. In most cases a one-sentence summary goes a long way.
 	4. ### Document All Functions. 
-		Use [JSDoc-style][https://en.wikipedia.org/wiki/JSDoc] comments to document all functions. VSCode and other IDEs will display this information in tooltips - make your documentation portable!
+		Use [JSDoc-style](https://en.wikipedia.org/wiki/JSDoc) comments to document all functions. VSCode and other IDEs will display this information in tooltips - make your documentation portable!
 	5. ### Explain Tricky Bits. 
 		Provide comments for tricky code. This should in particular include any code that deviates from what one might expect as the “normal” solution. Think about a new developer, what was tricky to you on your first day on the job?
 	6. ### Do Not Explain the Obvious. 
@@ -90,7 +90,7 @@ chapter: '4'
 	5. ### File Name Case Should Match Function Name Case. 
 		Do not use uppercase in file or directory names. Instead, use hyphens as separators. This is to avoid problems that can arise from the fact that different operating systems treat case differently.
 	6. ### Use Our Standard Full-Stack Organization. 
-		As a general rule, put all client code under “client” and all server code “server” ::Please Contribute::
+		As a general rule, put all client code under “client” and all server code “server”
 	7. ### Isolate Third-Party and Generated Code. 
 		Never mix your own code with third-party code. Do not mix generated code with code written by hand. It should be easy to see which code was written as a part of the project, which code was brought from somewhere else, and which was generated. (As an example, the type definitions file for this repo is output to a folder separate from the other code, which is named `generated`.)
 	8. ### Organize Code by Functionality.
